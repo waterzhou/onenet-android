@@ -1,0 +1,87 @@
+<manifest package="com.chinamobile.iot.onenet.sdksample"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <!-- amap permissions -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+
+    <application
+        android:name=".SampleApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- OneNET product api-key -->
+        <meta-data
+            android:name="com.chinamobile.iot.onenet.APP-KEY"
+            android:value="Your OneNET product api-key here"/>
+
+        <!-- OneNET api scheme -->
+        <meta-data
+            android:name="com.chinamobile.iot.onenet.SCHEME"
+            android:value="https"/>
+
+        <!-- OneNET server host -->
+        <meta-data
+            android:name="com.chinamobile.iot.onenet.HOST"
+            android:value="api.heclouds.com"/>
+
+        <!-- amap key -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="4e2fe593c634eadd057ce8da84f3d638"/>
+
+        <activity
+            android:name=".activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/MainActivityTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.EditApiKeyActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".activity.AddDeviceActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".activity.EditDeviceActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".activity.DeviceActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".activity.SendCommandActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".activity.AddDataStreamActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".activity.DisplayApiRespActivity"
+            android:screenOrientation="portrait"/>
+
+        <service android:name="com.amap.api.location.APSService"></service>
+
+    </application>
+
+</manifest>

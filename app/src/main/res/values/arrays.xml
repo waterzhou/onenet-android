@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="protocols">
+        <item>HTTP</item>
+        <item>EDP</item>
+        <item>MQTT</item>
+        <item>MODBUS</item>
+        <item>JTEXT</item>
+    </string-array>
+
+    <string-array name="request_method">
+        <item>GET</item>
+        <item>POST</item>
+        <item>PUT</item>
+        <item>DELETE</item>
+    </string-array>
+</resources>
